@@ -1,4 +1,5 @@
- class Observer {
+// vue 源码
+class Observer {
     constructor (value) {
       this.value = value
       // 给value新增一个__ob__属性，值为该value的Observer实例
