@@ -1,9 +1,9 @@
 // 自定义reactice 与 shadowreactive
 function shallowReactive(obj) {
-  return new Proxy(obj, reacticeHandler)
+  return new Proxy(obj, reactiveHandler)
 }
 
-const reacticeHandler = {
+const reactiveHandler = {
   get(target, key) {
     if (key === '_is_reactive') return true
     console.log(key);
@@ -45,7 +45,7 @@ function reactive (target) {
         target[key] = reactive(target[key])
       }
     }
-    const proxy = new Proxy(target,reacticeHandler)
+    const proxy = new Proxy(target,reactiveHandler)
     return proxy
   }
   return target
