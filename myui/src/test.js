@@ -29,4 +29,6 @@ function sort2 () {
     }
     console.log(array);
 }
-sort2()
+// sort2()
+console.log(Boolean(1));
+console.log(Boolean(0));
