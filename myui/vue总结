@@ -198,20 +198,41 @@ ES6系列
   map fn: size(),set(),get().has()
 面试官：你是怎么理解ES6中 Promise的？使用场景？
   是异步编程的一种解决方案，比传统的解决方案（回调函数）更加合理和更加强大
-  
+
 
 面试官：怎么理解ES6中 Generator的？使用场景？
+  Generator是异步解决的一种方案，最大特点则是将异步操作同步化表达出来
+  对象迭代、控制输出、部署Interator接口..
+
 面试官：你是怎么理解ES6中Proxy的？使用场景?
+
 面试官：你是怎么理解ES6中Module的？使用场景？
+  代码抽象,封装,复用,依赖管理;  AMD,Commonjs,es6都是模块化规范,
+  AMD:异步
+  Commonjs:同步,不会污染全局作用域
+
 面试官：你是怎么理解ES6中 Decorator 的？使用场景？
+
 Javascript系列
 面试官：说说Javascript中的数据类型？区别？
+  基本类型:Number,String,Boolean,Null,Undefined,symbol
+  引用类型:Object,Function,Array (Date、RegExp、Map、Set)
 面试官：Javscript数组的常用方法有哪些？
+  map,foreach,filter,concat,push,unshit,pop,slice,splice,includes,join
 面试官：Javascript字符串的常用方法有哪些？
+  includes,split,slice,splice,toUpperCase,tolowerCase,trim,toString,replace
 面试官：谈谈 Javascript 中的类型转换机制
+  显式转换:Number(). toString, Boolean()
+  隐式转换:
+    比较运算（==、!=、>、<）、if、while需要布尔值地方
+    算术运算（+、-、*、/、%）
 面试官：== 和 ===区别，分别在什么情况使用
+  （==）会做类型转换，再进行值的比较，(===)不会做类型转换
 面试官：深拷贝浅拷贝的区别？如何实现一个深拷贝？
+  如果属性是基本类型，拷贝的就是基本类型的值。如果属性是引用类型，拷贝的就是内存地址
+
 面试官：说说你对闭包的理解
+  
 面试官：说说你对作用域链的理解
 面试官：JavaScript原型，原型链 ? 有什么特点？
 面试官：Javascript如何实现继承？
