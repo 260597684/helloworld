@@ -38,9 +38,6 @@ function reactive (target) {
         target[index] = reactive(item)
       })
     } else {
-      // Object.keys(target).forEach(key => {
-      //   target[key] = reactive(target[key])
-      // })
       for (let key in target) {
         target[key] = reactive(target[key])
       }
