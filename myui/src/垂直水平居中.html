@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 1,知道宽高的 */
+  div {}
+
+  .div1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background-color: tomato;
+  }
+
+  .div2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+  }
+
+  .div3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .div4 {
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+  }
+
+  #demo {
+    width: 0;
+    height: 0;
+    border: 40px solid;
+    border-color: transparent  red transparent transparent;
+  }
+  .p1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .p2{
+    position: relative;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+  }
+  .p2::after{
+    content: ',,,,';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #fff;
+    /* 块级格式化上下文 */
+  }
+</style>
+
+<body>
+  <!-- 垂直居中 -->
+  <!-- <div class="div1"></div> -->
+  <!-- <div class="div2"></div> -->
+  <!-- <div class="div3">
+    <div class="div4"></div>
+  </div> -->
+  <!-- css三角形 -->
+  <div id="demo"></div>
+  <!-- 单行文本溢出 -->
+  <p class="p1">
+    单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出
+  </p>
+  <p class="p2">
+    单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出单行文本溢出
+  </p>
+
+</body>
+
+</html>

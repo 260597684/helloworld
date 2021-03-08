@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    protrotype: 原型
+    __proto__: 原型链（原型的连接点）
+    从属关系 --->
+    prototype --->函数，函数的一个属性
+    __proto__  --> 对象Object的一个属性,
+    对象的__proto__保存着该对象的构造函数的prototype
+
+    原型链继承
+    先从对象上找,找不到的话,就从原型上找
+    */
+   function Test () {}
+   console.log(Test.prototype);
+   let test = new Test()
+   console.log(test.__proto__);
+   console.log(Test.prototype.__proto__);
+   
+
+
+  </script>
+</body>
+
+</html>
