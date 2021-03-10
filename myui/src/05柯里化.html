@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function url_curring(a) {
+      return function (b, c) {
+        console.log(`${a}${b}${c}`);
+      }
+    }
+    const urlhttp = url_curring('http://')
+    // console.log(urlhttp('bilibili.com', '/1'));
+    // console.log(urlhttp('bilibili.com', '/2'));
+    // console.log(urlhttp('bilibili.com', '/3'));
+    // http://bilibili.com/1
+    // http://bilibili.com/2
+    // http://bilibili.com/3
+
+    // 兼容的方法
+    const whichEvent = (function () {
+      if (window.addEventListener) {
+        return function (element, type, listener, useCapture) {
+          element.addEventListener (type,function (e) {
+            listener.call(element,e)
+          },useCapture)
+        }
+      } else if (window.attachEvent) {
+        return function (element, type, hander) {
+          element.attachEvent('on' + type,function(e) {
+            hander.call(element,e)
+          })
+        }
+      }
+    })()
+
+    function add() {
+      // let args = Array.prototype.slice.call(arguments)
+      let args = Array.from(arguments).slice()
+      let inner = function () {
+        args.push(...arguments)
+        // let sum = args.reduce((prev ,cur) => {
+        //   return prev + cur
+        // })
+        // return sum
+        return inner
+      }
+      inner.toString = function () {
+        return args.reduce((prev, cur) => {
+          return prev + cur
+        })
+      }
+      return inner
+    }
+    console.log(add(111,2,3));
+    console.log(add(1)(2));
+    console.log(add(1)(2)(3));
+    console.log(add(1,2,3)(2)(3));
+    function add2 () {
+      const args = Array.prototype.slice.call(arguments)
+      function inner () {
+        args.push(...arguments)
+        return inner
+      }
+      inner.toString = function () {
+        return args.reduce((p1,p2) => {
+          return p1 + p2
+        })
+      }
+      return inner
+    }
+    console.log(Number(add2(1,2,3,4)(5)));
+  </script>
+</body>
+
+</html>
