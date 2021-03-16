@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>定义一个页面或是区域的头部</header>
+  <div>
+    <section>定义一个区域</section>
+    <aside>定义页面内容的侧边框部分</aside>
+    <main>
+      定义文章的主要内容
+main标签在一份文档中是唯一的，其后代元素常常包括
+    </main>
+    <blockquote>
+      blockquote HTML 元素（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到
+      cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 <cite> 元素。
+        HTML 元素（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite
+        特性上，若要以文本的形式告知读者引文的出处时，可以通过 <cite> 元素。
+          HTML 元素（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite
+          特性上，若要以文本的形式告知读者引文的出处时，可以通过 <cite> 元素。
+
+    </blockquote>
+    ------------
+    <p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+    ------------
+    <p>There is a certain <em>je ne sais quoi</em> in the air.</p>
+    ------------
+    <p>There is a certain <b>je ne sais quoi</b> in the air.</p>
+    ------------
+    <p>There is a certain <strong>je ne sais quoi</strong> in the air.</p>
+
+
+    <p>
+      P :
+      【南方+3月11日讯】据报道，“从特朗普到拜登”话题火遍美国社交媒体，美国网友纷纷在推特上发推文，庆祝美国从特朗普手中解脱。
+      【南方+3月11日讯】据报道，“从特朗普到拜登”话题火遍美国社交媒体，美国网友纷纷在推特上发推文，庆祝美国从特朗普手中解脱。
+      【南方+3月11日讯】据报道，“从特朗普到拜登”话题火遍美国社交媒体，美国网友纷纷在推特上发推文，庆祝美国从特朗普手中解脱。
+    </p>
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="form-example">
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-example">
+        <input type="submit" value="Subscribe!">
+      </div>
+      <pre>
+        L          TE
+        A       A
+          C    V
+           R A
+           DOU
+           LOU
+          REUSE
+          QUE TU
+          PORTES
+        ET QUI T'
+        ORNE O CI
+         VILISÉ
+        OTE-  TU VEUX
+         LA    BIEN
+        SI      RESPI
+      RER       - Apollinaire
+      </pre>
+    </form>
+    <table>
+      <caption>表名</caption>
+      <thead>
+        <tr>
+          <td>name`</td>
+          <td>age</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>zhangsan</td>
+          <td>23 </td>
+        </tr>
+        <tr>
+          <td>lisi</td>
+          <td>24 </td>
+        </tr>
+      </tbody>
+      <tfoot id= "foot"onscroll="myonscroll">
+        nihao !!!
+      </tfoot>
+    </table>
+  </div>
+  <footer>定义一个页面或是区域的底部</footer>
+</body>
+
+<script>
+  /**
+   * nav 导航栏
+   * body 身体
+   * footer header
+   * section  定义文档中的节
+   * article 文档,页面,应用或者网站中的独立结构
+   * p 文本段落
+   * address 联系信息
+   * 
+   */
+  document.getElementById('foot').onscroll = function () {
+    console.log(1234);
+    var scrollTop = this.scrollTop,//页面上卷的高度
+        wholeHeight = this.scrollHeight,//页面底部到顶部的距离
+        divHeight = this.clientHeight;//页面可视区域的高度
+    // 到底部
+    if(scrollTop + divHeight >= wholeHeight){
+        // do
+        console.log(111);
+      }
+      //到顶部
+      if(scrollTop==0){
+        console.log(222);
+        // do
+    }
+  }
+  function myonscroll () {
+  }
+</script>
+<style>
+  form.form-example {
+    display: table;
+  }
+  div.form-example {
+    display: table-row;
+  }
+  label,
+  input {
+    display: table-cell;
+    margin-bottom: 10px;
+  }
+
+  label {
+    padding-right: 10px;
+  }
+</style>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let alet = 'alet'
+    // console.log(alet);
+    // console.log(window.alet);
+    // let,const 声明的在scope中,var 在全局对象中
+    // 先去scope中查看,再去全局对象window中查找
+
+    // var foo = 'foo'
+    // function fn () {
+    //   var foo = 'foo1'
+    //   foo = 'foo2'
+    //   console.log(foo);
+    //   // let foo;
+    // }
+    // console.log(foo);
+    // fn()
+
+    // 作用域就是解析变量名的一个集合,就是当前的运行上下文
+    // 函数作用域是在创建时决定的,不是调用的时候决定
+
+    // function foo () {
+    //   console.log(a);
+    // }
+    // function bar () {
+    //   console.log(a);
+    //   var a = 3;
+    //   foo()
+    // }
+    // var a  = 1;
+    // bar()
+
+    // let a = 1;
+    // if (true) {
+    //   let a = 2
+    //   console.log(a);
+    // }
+    // console.log(a);
+
+    // console.log(foo);
+    // if (true) {
+    //   function foo () {
+    //     console.log('foot');
+    //   }
+    // }
+    // foo()
+
+    // var foo = 1
+    // if  (true){
+    //   function foo () {
+    //     console.log('foo()');
+    //   }
+
+    // }
+    // console.log(foo);
+    // foo()
+
+    // var arr = []
+    // for (let i=0;i<5;i++) {
+    //   arr[i] = function () {
+    //     console.log(i);
+    //   }
+    // }
+    // arr[0]()
+    // arr[1]()
+    // arr[2]()
+    // arr[3]()
+    // arr[4]()
+    /**
+     * 先等几
+     * 
+     */
+    var a = 10;
+    (function () {
+      console.log(a)
+      a = 5
+      console.log(window.a)
+      var a = 20;
+      console.log(a)
+    })()
+
+    // var obj = {
+    //   '2': 3,
+    //   '3': 4,
+    //   'length': 2,
+    //   'splice': Array.prototype.splice,
+    //   'push': Array.prototype.push
+    // }
+    // obj.push(1) 
+    // obj.push(2) 
+    // console.log(obj)
+    var a = {
+      n: 1
+    };
+    a.x = a
+    var b = a;
+    a = {
+      n: 2
+    };
+    a.c = a
+    console.log('a.c',a.c);
+    console.log('a.x',a.x)
+    // console.log(b.x)
+  </script>
+</body>
+
+</html>

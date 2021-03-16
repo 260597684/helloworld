@@ -63,15 +63,13 @@
     console.log(add(1)(2)(3));
     console.log(add(1,2,3)(2)(3));
     function add2 () {
-      const args = Array.prototype.slice.call(arguments)
+      var arr = Array.prototype.slice.call(arguments)
       function inner () {
-        args.push(...arguments)
+        arr.push(...arguments)
         return inner
       }
       inner.toString = function () {
-        return args.reduce((p1,p2) => {
-          return p1 + p2
-        })
+        return  arr.reduce((a,b) => {return (a + b)})
       }
       return inner
     }
