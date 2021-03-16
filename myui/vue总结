@@ -243,8 +243,18 @@ Javascript系列
 面试官：说说你对作用域链的理解
 面试官：JavaScript原型，原型链 ? 有什么特点？
 面试官：Javascript如何实现继承？
-
-
+面试官：http 请求方式: get put post delete 
+面试官: http请求的head参数有哪些?
+  host,content-type, Connection(表示是否需要持久连接),Keep-Alive(显示此HTTP连接的Keep-Alive时间。)
+  methods,status code, Remote Address, Referrer Policy
+面试官:浏览器的线程有哪些?
+  GUI渲染线程:负责渲染浏览器,解析html,css dom,cssom,
+  JS引擎线程:JS内核,处理脚本文件等, 与渲染线程是冲突的,
+  事件触发线程:事件点击等
+  定时器触发线程:setTimeout,setInterval
+  异步请求线程:  ajax
+面试官:Promise
+  
 
 我叫王鑫,今年27岁,来自山西阳泉,大学专科文凭。
 现就职于北京天昊卓越科技有限公司,参与过的项目大约有4个,
