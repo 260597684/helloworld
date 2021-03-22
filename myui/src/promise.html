@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const p1 = new Promise((resole, reject) => {
+            const time = Date.now()
+            console.log(time);
+            if (time % 2 == 0) {
+                resole("成功的数据")
+            } else {
+                reject("失败的数据")
+            }
+        })
+        const p2 = p1.then(
+            (value) => {
+                console.log("yes" + value)
+                return new Promise((resole, reject) => {
+                    // resole('11111')
+                    reject('11111')
+                })
+            },
+            (value) => {
+                console.log("no" + value)
+                return new Promise((resole, reject) => {
+                    // resole('22222')
+                    reject('22222')
+                })
+            }
+        )
+        console.log(p2);
+        p2.then(
+            (value) => {
+                console.log("yes" + value)
+                return new Promise((resole, reject) => {
+                    // resole('11111')
+                    reject('333')
+                })
+            },
+            (value) => {
+                console.log("no" + value)
+                return new Promise((resole, reject) => {
+                    // resole('22222')
+                    reject('444')
+                })
+            }
+        ).then(
+            (value) => {
+                console.log("yes" + value)
+                return new Promise((resole, reject) => {
+                    // resole('11111')
+                    reject('555')
+                })
+            },
+            (value) => {
+                console.log("no" + value)
+                return new Promise((resole, reject) => {
+                    // resole('22222')
+                    reject('666')
+                    reject('666')
+                })
+            }
+        ).then(
+            (value) => {
+                console.log("yes" + value)
+                return value
+                return new Promise((resole, reject) => {
+                    // resole('11111')
+                    reject('777')
+                    reject('777')
+                })
+            },
+            (value) => {
+                console.log("no1" + value)
+                return value
+                // return new Promise((resole, reject) => {
+                //     resole('888')
+                //     // reject('888')
+                // })
+            }
+        ).then(
+
+            // (value) => {
+            //     console.log("yes111" + value)
+            //     // return new Promise((resole, reject) => {
+            //     //     // resole('11111')
+            //     //     reject('777')
+            //     // })
+            // },
+            (value) => {
+                console.log("no111" + value)
+                // return new Promise((resole, reject) => {
+                //     // resole('22222')
+                //     reject('888')
+                // })
+            }
+        )
+    </script>
+</body>
+
+</html>
