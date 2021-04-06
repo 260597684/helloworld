@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js</title>
+</head>
+
+<body>
+  <div id="id" name="myid">
+    123
+  </div>
+  <form name="Myform">
+    <select name="oSelect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </form>
+
+  <script>
+    let id = document.getElementById('id')
+    // id.innerText = '123'
+    // id.style.background = 'red'
+
+    // let span = document.createElement('span')
+    // span.innerText = 'span'
+    // id.appendChild(span)//将span放入div中
+
+    // // 文本标签
+    // const textnode = document.createTextNode("text");
+    // span.appendChild(textnode)
+
+
+    var node = document.createElement("div");
+    var _p = document.createElement('p');
+    var _span = document.createElement('span');
+    node.appendChild(_p);
+    node.insertBefore(_span, _p);
+    // document.write(node)
+    id.appendChild(node)
+
+    // console.log(id.childNodes);
+    // document.bgColor = 'yellow'
+    // document.fgColor = 'red'
+
+
+    //遍历option项并且判断某个option是否被选中
+    for (i = 0; i < document.Myform.oSelect.length; i++) {
+      if (document.Myform.oSelect[i].selected != true)
+        document.write(document.Myform.oSelect[i].value)
+      else
+        document.write("<font color=red>" + document.Myform.oSelect[i].value + "</font>")
+    }
+    const option = document.createElement('option')
+    option.value = '4'
+    option.text = '4'
+    document.Myform.oSelect.add(option)
+    console.log(document.myid);
+
+    
+  </script>
+</body>
+
+</html>
